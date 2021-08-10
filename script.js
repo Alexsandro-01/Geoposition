@@ -87,7 +87,7 @@ function creatElement(obj, precision) {
         divInfo.className = 'response-box'
 
             let pInfo = document.createElement('p')
-            pInfo.innerHTML = '<b>Precisão: </b>' + precision + ' m'
+            pInfo.innerHTML = '<b>Precisão: </b>' + precision.toFixed(1) + ' m'
 
             let pLat = document.createElement('p')
             pLat.innerHTML = '<b>Latitude: </b>' + obj.GeoPosition.Latitude
@@ -113,5 +113,6 @@ function creatElement(obj, precision) {
     divInfo.appendChild(pLong)
     divResponse.appendChild(divInfo)
 
+    section.innerHTML = ''
     section.append(divResponse)
 }
